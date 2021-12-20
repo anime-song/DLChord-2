@@ -94,11 +94,11 @@ F#m7(9)
 ```python
 >>> from dlchord2 import Chord
 >>> chord = Chord("C")
->>> cons = chord.getNotes(sparse=False)
+>>> cons = chord.get_notes(sparse=False)
 >>> print(cons)
 [0 4 7]
 
->>> cons = chord.getNotes(sparse=True)
+>>> cons = chord.get_notes(sparse=True)
 >>> print(cons)
 [2. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0.]
 # ベース音 2
