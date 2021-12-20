@@ -1,6 +1,6 @@
 # DL-Chord2
-[![PyPI](https://img.shields.io/pypi/v/dlchord.svg)](https://pypi.org/project/dlchord2)
-[![Build Status](https://travis-ci.com/anime-song/DL-Chord.svg?branch=master)](https://travis-ci.com/anime-song/DLChord2)
+[![PyPI](https://img.shields.io/pypi/v/dlchord2.svg)](https://pypi.org/project/dlchord2)
+[![Build Status](https://travis-ci.com/anime-song/DLChord-2.svg?branch=master)](https://travis-ci.com/anime-song/DLChord-2)
 ## 概要
 和音を解析するライブラリ。
 
