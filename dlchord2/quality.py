@@ -15,6 +15,31 @@ class Quality(object):
         self.__add_tension_notes = [Note.create_from_tension(tension)
                                     for tension in self.__quality_data.add_tensions]
 
+    def __str__(self):
+        return self.__raw_quality_text
+
+    def __unicode__(self):
+        return self.__raw_quality_text
+
+    def __repr__(self):
+        return "<Quality: {}>".format(self.__raw_quality_text)
+
+    def __eq__(self, other):
+        if not isinstance(other, Quality):
+            raise TypeError("{} オブジェクトとQualityオブジェクトを比較できません".format(type(other)))
+
+        if [note.note_index for note in self.get_notes()] == [note.note_index for note in  other.get_notes()]:
+            return True
+
+        return False
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
+    @property
+    def raw_chord_text(self):
+        return self.__raw_chord_text
+
     @property
     def raw_quality_text(self):
         """

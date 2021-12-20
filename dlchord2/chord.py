@@ -17,9 +17,12 @@ class Chord(object):
         self.__quality = Quality(self.__chord_data.quality_text)
 
     def __str__(self):
-        return "<Chord: {}>".format(self.raw_chord_text)
+        return self.raw_chord_text
 
     def __unicode__(self):
+        return self.raw_chord_text
+
+    def __repr__(self):
         return "<Chord: {}>".format(self.raw_chord_text)
 
     def __eq__(self, other):
