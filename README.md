@@ -26,17 +26,14 @@ $ pip install dlchord2
 ## コード検索
 ```python
 >>> from dlchord2 import notes_to_chord
->>> chords = notes_to_chord(["C", "E", "G"])
+>>> from dlchord2 import Note
+>>> chords = notes_to_chord([Note("C"), Note("E"), Note("G")])
 >>> chords
 [<Chord : C>]
 
->>> chords = notes_to_chord(["B", "Db", "F", "A"])
+>>> chords = notes_to_chord([Note("B"), Note("Db"), Note("F"), Note("A")])
 >>> chords
 [<Chord: Faug/B>, <Chord: Dbaug/B>, <Chord: Aaug/B>]
-
->>> chords = notes_to_chord(["B", "Db", "F", "A"], scale="F#")
->>> chords
-[<Chord: Faug/B>, <Chord: C#aug/B>, <Chord: Aaug/B>]
 ```
 
 ## ルート音取得
