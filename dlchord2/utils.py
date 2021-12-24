@@ -19,6 +19,9 @@ def __chord_sort_func(chord):
         if Note.create_from_tension("7") in chord.quality.tension_notes:
             eval_score += 1
 
+            if "aug" in chord.quality.qualities:
+                eval_score -= 1
+
     return eval_score
 
 
@@ -95,6 +98,9 @@ def note_indexes_to_chords(note_indexes, sort_func=__chord_sort_func):
     :return: コードの候補のリスト
     :rtype: list[Chord]
     """
+
+    # 重複ノーツは不要
+    note_indexes = sorted(set(note_indexes), key=note_indexes.index)
 
     shifted_notes = note_indexes[1:]
 
