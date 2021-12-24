@@ -97,5 +97,5 @@ def test_reconfigured():
             for bass_text in tones:
                 chord_name = root_text + quality_name + "/" + bass_text
                 chord = Chord(chord_name)
-
-                assert chord == chord.reconfigured()
+                rec_chord = chord.reconfigured()
+                assert chord == rec_chord
