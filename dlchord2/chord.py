@@ -117,10 +117,10 @@ class Chord(object):
 
             # 構成音は1
             for note in notes:
-                sparse_notes[note] = 1
+                sparse_notes[note.note_index] = 1
 
             # ベース音は2
-            sparse_notes[notes[0]] = 2
+            sparse_notes[notes[0].note_index] = 2
 
             notes = sparse_notes
 

@@ -31,6 +31,7 @@ TONE_TO_INDEX = {"C": 0, "B#": 0, "Dbb": 0, "Db": 1, "C#": 1, "D": 2, "Ebb": 2, 
 
 SCALE_INDEXES = [0, 2, 4, 5, 6, 9, 11]
 
+
 C_MAJOR_SCALE = ["C", "Db", "D", "Eb", "E", "F", "F#", "G", "Ab", "A", "Bb", "B"]
 C_SHARP_MAJOR_SCALE = ["C#", "D", "D#", "E", "E#", "F#", "F##", "G#", "A", "A#", "B", "B#"]
 D_FLAT_MAJOR_SCALE = ["Db", "Ebb", "Eb", "Fb", "F", "Gb", "G", "Ab", "Bbb", "Bb", "Cb", "C"]
