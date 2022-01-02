@@ -5,18 +5,29 @@ from dlchord2.note import Note
 
 def __chord_sort_func(chord):
     eval_score = 0
-    if Note.create_from_tension("5") in chord.quality.tension_notes:
-        eval_score -= 1
 
-    if chord.bass in chord.quality.add_tension_notes:
+    relative_bass = Note.create_from_index_note((chord.bass.note_index - chord.root.note_index) % 12)
+    if relative_bass in chord.quality.add_tension_notes:
         eval_score -= 1
 
     if chord.is_on_chord:
         eval_score -= 1
 
-    seventh_index = 10
-    if chord.bass.note_index == (chord.root.note_index + seventh_index) % 12:
-        if Note.create_from_tension("7") in chord.quality.tension_notes:
+        if Note.create_from_tension("11") in chord.quality.add_tension_notes:
+            eval_score -= 1
+
+        if "sus" in chord.quality.qualities:
+            eval_score -= 1
+
+            if Note.create_from_tension("9") in chord.quality.tension_notes:
+                eval_score -= 1
+
+        if Note.create_from_tension("5") in chord.quality.tension_notes:
+            eval_score -= 2
+
+    seventh_note = Note.create_from_tension("7")
+    if relative_bass == seventh_note:
+        if seventh_note in chord.quality.tension_notes:
             eval_score += 1
 
             if "aug" in chord.quality.qualities:
