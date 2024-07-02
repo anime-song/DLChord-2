@@ -25,6 +25,9 @@ def __chord_sort_func(chord):
         if Note.create_from_tension("5") in chord.quality.tension_notes:
             eval_score -= 2
 
+        if "7(b13)" == chord.quality.raw_quality_text:
+            eval_score -= 1
+
     seventh_note = Note.create_from_tension("7")
     if relative_bass == seventh_note:
         if seventh_note in chord.quality.tension_notes:
