@@ -2,6 +2,8 @@
 [![PyPI](https://img.shields.io/pypi/v/dlchord2.svg)](https://pypi.org/project/dlchord2)
 [![Build Status](https://travis-ci.com/anime-song/DLChord-2.svg?branch=master)](https://travis-ci.com/anime-song/DLChord-2)
 ## 概要
+このライブラリは古くなりました。最新のライブラリは[DLChordX](https://github.com/anime-song/DLchordX)を利用してください。
+
 和音を解析するライブラリ。
 
 以下のようなことができます。
